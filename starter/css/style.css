@@ -160,6 +160,29 @@ transform: translate(0);
 }
 
 
+
+
+@keyframes moveInBottom {
+
+/*start*/	
+
+0% {
+opacity: 0;
+transform: translateY(30px);
+}
+
+/*middle*/
+
+
+
+/*finish*/
+
+100% {
+opacity: 1;
+transform: translate(0);
+}
+
+}
 .btn:link,
 .btn:visited{
 
@@ -210,7 +233,15 @@ background-color: #fff;
 }
 
 .btn:hover::after{
-transform: scale(1.5);
+transform: scaleX(1.4) scaleY(1.6);
 opacity: 0;
+
+}
+
+.btn-animated{
+
+animation: moveInBottom .5s ease-out .75s;
+animation-fill-mode: backwards;
+
 
 }
